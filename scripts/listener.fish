@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
-set duration_minutes 5
+set duration_minutes 10
+set duration 0.083
 set pipe "signal.pipe"
 set python_capture "capture_network.py"
 
@@ -9,8 +10,8 @@ if not test -p $pipe
     mkfifo $pipe
 end
 
-for i in (seq 1 $duration_minutes)
-    echo "🎧 Capture $i/$duration_minutes..."
+for i in (seq 1 (math "$duration_minutes / $duration"))
+    echo "🎧 Capture $i..."
     python3 $python_capture
 
     echo "OK" > $pipe  # Envoie un simple signal

@@ -1,6 +1,6 @@
 import subprocess
 
-def capture(interface='eth0', duration=60, output='../data/pcap/capture.pcap'):
+def capture(interface='eth0', duration=5, output='../data/pcap/capture.pcap'):
     print(f"Capturing for {duration}s on {interface}")
     subprocess.run(["sudo", "timeout", str(duration), "tcpdump", "-i", interface, "-w", output])
 
