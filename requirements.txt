@@ -1,0 +1,26 @@
+# --- Réseau & capture de paquets ---
+scapy
+pyshark
+dpkt
+netifaces
+
+# --- Machine Learning ---
+scikit-learn
+xgboost
+
+# --- Deep Learning (optionnel) ---
+tensorflow
+torch
+torchvision
+
+# --- Traitement & manipulation des données ---
+numpy
+pandas
+
+# --- Visualisation ---
+matplotlib
+seaborn
+
+# --- Utilitaires ---
+psutil
+tqdm
