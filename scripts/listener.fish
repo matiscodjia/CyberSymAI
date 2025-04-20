@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set duration_minutes 10
+set duration_minutes 60
 set duration 0.083
 set pipe "signal.pipe"
 set python_capture "capture_network.py"
